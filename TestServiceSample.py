@@ -15,7 +15,7 @@ def startServer():
 
 
 def startClient(results):
-    images = os.listdir("info/20190410/IMAGES/Pic_2")
+    images = os.listdir("info/20190423/IMAGES/Pic_2")
     for im in images:
         path = "info/20190410/IMAGES/Pic_2/" + im
         data = json.dumps({
@@ -39,26 +39,14 @@ def codecov(imgPath):
         image = cv2.imread(imgPath + "/" + im)
         print(im)
         pos = im.split(".")[0].split("-")
-        cfg = im.split(".")[0]+"_1"
-        # for i in range(1, 6):
-        #     cfg = pos[0] + "-" + pos[1] + "_" + str(i)
-        #     if cfg + ".json" in config:
-        #         receive2 = meterReader(image, [cfg])
-        #         print(cfg, receive2)
-        receive2 = meterReader(image, [cfg])
-        print(cfg, receive2)
+        # cfg = im.split(".")[0]+"_1"
+        for i in range(1, 6):
+            cfg = pos[0] + "-" + pos[1] + "_" + str(i)
+            if cfg + ".json" in config:
+                receive2 = meterReader(image, [cfg])
+                print(cfg, receive2)
     print("codecov done")
 
-
-def testVideo():
-    video_path = "info/20190128/IMAGES/video_"
-    for file in os.listdir(video_path):
-        if file.startswith(".DS"):
-            continue
-        video = cv2.VideoCapture(os.path.join(video_path, file))
-        result = meterReader(video, [file[:-4] + "_1"])
-        print(file, result)
-    print("codecov done")
 
 
 if __name__ == "__main__":
@@ -83,7 +71,7 @@ if __name__ == "__main__":
 
     # codecov("info/20190410/IMAGES/Pic")
     # codecov("info/20190410/IMAGES/Pic_2")
-    codecov("info/20190515/IMAGES/image")
+    codecov("info/20190523/image")
     # codecov("info/20190514/image/")
     #
     # codecov("info/20190416/IMAGES/image")

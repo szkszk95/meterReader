@@ -16,7 +16,6 @@ def digitPressure(image, info):
     # 存储图片
     if not os.path.exists("storeDigitData"):
         os.mkdir("storeDigitData")
-
     try:
         os.mkdir("storeDigitData/thresh")
         os.mkdir("storeDigitData/rgb")
@@ -30,6 +29,7 @@ def digitPressure(image, info):
         except IOError:
             continue
 
+    # 识别
     if 'rgb' in info and info['rgb']:  # rgb as input
         myRes = rgbRecognize(template, info)
     else:
@@ -115,6 +115,8 @@ def bitRecognize(template, info):
         if ifOpen == "close":
             p = cv2.getStructuringElement(cv2.MORPH_RECT, (2, 2))
             thresh = cv2.morphologyEx(thresh, cv2.MORPH_CLOSE, p)
+
+    thresh = cv2.erode(thresh, np.ones((3,3)))
 
     if os.path.exists("storeDigitData/"):
         imgNum = int((len(os.listdir("storeDigitData/")) - 1) / 3)

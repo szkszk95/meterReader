@@ -1,0 +1,32 @@
+{
+    "name": "test",
+    "type": "digitPressure",
+    "ROI": {
+        "x": 102,
+        "y": 42,
+        "w": 1728,
+        "h": 1004
+    },
+    "startPoint": {
+        "x": 61,
+        "y": 69
+    },
+    "endPoint": {
+        "x": 277,
+        "y": 232
+    },
+    "centerPoint": {
+        "x": 275,
+        "y": 69
+    },
+    "startValue": 0,
+    "totalValue": 0,
+    "digitType": "KWH",
+    "thresh": {
+        "block": 31,
+        "param": 2
+    },
+    "ifopen": "close",
+    "rgb": false,
+    "result": 0.0
+}

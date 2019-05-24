@@ -1,0 +1,32 @@
+{
+    "name": "test",
+    "type": "normalPressure",
+    "ROI": {
+        "x": 340,
+        "y": 424,
+        "w": 554,
+        "h": 558
+    },
+    "startPoint": {
+        "x": 11,
+        "y": 82
+    },
+    "endPoint": {
+        "x": 84,
+        "y": 24
+    },
+    "centerPoint": {
+        "x": 81,
+        "y": 84
+    },
+    "startValue": 0,
+    "totalValue": 12,
+    "digitType": "False",
+    "thresh": {
+        "block": 31,
+        "param": 2
+    },
+    "ifopen": "close",
+    "rgb": false,
+    "result": 0.0
+}

@@ -1,0 +1,32 @@
+{
+    "name": "test",
+    "type": "digitPressure",
+    "ROI": {
+        "x": 100,
+        "y": 106,
+        "w": 1800,
+        "h": 946
+    },
+    "startPoint": {
+        "x": 77,
+        "y": 80
+    },
+    "endPoint": {
+        "x": 318,
+        "y": 254
+    },
+    "centerPoint": {
+        "x": 315,
+        "y": 68
+    },
+    "startValue": 0,
+    "totalValue": 0,
+    "digitType": "RPC_V",
+    "thresh": {
+        "block": 31,
+        "param": 2
+    },
+    "ifopen": "close",
+    "rgb": false,
+    "result": 0.0
+}

@@ -25,6 +25,8 @@ from Algorithm.others.colordetect import colordetect
 from Algorithm.others.Cabinet_indicator import indicatorimg
 from Algorithm.others.Knob_status import knobstatus
 
+from Algorithm.colorIndicator import colorIndicator
+
 from configuration import *
 
 
@@ -110,6 +112,8 @@ def getInfo(ID):
         info["type"] = indicatorimg
     elif info["type"] == "Knob":
         info["type"] = knobstatus
+    elif info["type"] == "colorIndicator":
+        info["type"] = colorIndicator
     else:
         info["type"] = None
 

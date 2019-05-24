@@ -1,0 +1,32 @@
+{
+    "name": "TEST",
+    "type": "colorIndicator",
+    "ROI": {
+        "x": 52,
+        "y": 34,
+        "w": 1442,
+        "h": 978
+    },
+    "startPoint": {
+        "x": 0,
+        "y": 0
+    },
+    "endPoint": {
+        "x": 0,
+        "y": 0
+    },
+    "centerPoint": {
+        "x": 0,
+        "y": 0
+    },
+    "startValue": 0,
+    "totalValue": 0,
+    "digitType": "False",
+    "thresh": {
+        "block": 31,
+        "param": 2
+    },
+    "ifopen": "close",
+    "rgb": false,
+    "result": 0.0
+}
